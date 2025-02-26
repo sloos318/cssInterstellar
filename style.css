@@ -1,0 +1,117 @@
+:root {
+    --space-color: #000;
+    --star-color: #fff;
+    --earth-color: radial-gradient(circle at 50% 30%, rgba(245, 237, 48, 0), rgba(17, 93, 215, 0.2) 50%, rgba(0, 87, 84, .6) 100%);
+    --extra-white: radial-gradient(circle at 50% 0px, rgba(255, 255, 255, .4), rgba(38, 38, 38, 0.091) 58%);
+    --shadow-ball: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+}
+
+* {
+    padding: 0;
+    margin: 0
+}
+
+li {
+    list-style: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--space-color);
+    
+
+
+    figure {
+        display: inline-block;
+        width: 2vw;
+        height: 2vw;
+        margin: 0;
+        border-radius: 50%;
+        position: relative;
+        background: url(./images/earth.png) no-repeat;
+        background-size: 100%;
+    }
+
+    figure:after {
+        content: "";
+        position: absolute;
+        border-radius: 100%;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: var(--earth-color);
+    }
+      
+    figure:before {
+        content: "";
+        position: absolute;
+        top: 1%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        border-radius: 50%;
+        background: var(--extra-white);
+        z-index: 2;
+    }
+
+    ul {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        margin: auto;
+        overflow: hidden;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    li {
+        position: absolute;
+    }
+
+    
+    li:nth-of-type(1) {
+        height: 8vw;
+        width: 8vw;
+        background-color: #fae20a;
+        border-radius: 50%;
+        box-shadow: 0 0 84px orange;
+    }
+
+    /* ************************************************************************************* */
+    /* mercury *//* mercury *//* mercury *//* mercury *//* mercury *//* mercury *//* mercury */
+    /* ************************************************************************************* */
+
+    li:nth-of-type(2) {
+        margin-top: -185px;
+        margin-left: -185px;
+        width: 370px;
+        height: 370px;
+        animation: spin-right 36.5s linear infinite;
+    }
+
+    li:nth-of-type(2) figure {
+        margin-top: -20px;
+        margin-left: -20px;
+        height: 40px;
+        width: 40px;
+        background-color: #3498db;
+        box-shadow: 0 0 34px #3a4385;
+        animation: spin-right 36.5s linear infinite;
+    }
+
+
+
+}
+
+@keyframes spin-right {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
