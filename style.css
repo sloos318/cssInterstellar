@@ -62,7 +62,7 @@ section {
         height: 100vh;
         margin: auto;
         overflow: hidden;
-
+        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -112,6 +112,10 @@ section {
     100% {
         transform: rotate(360deg);
     }
+}
+
+p {
+    font-family:'M PLUS 1p';
 }
 
 
