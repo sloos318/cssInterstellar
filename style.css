@@ -1,9 +1,57 @@
 :root {
     --space-color: #000;
+    --timers-color: rgba(33, 33, 33, 0.8);
     --star-color: #fff;
     --earth-color: radial-gradient(circle at 50% 30%, rgba(245, 237, 48, 0), rgba(17, 93, 215, 0.2) 50%, rgba(0, 87, 84, .6) 100%);
     --extra-white: radial-gradient(circle at 50% 0px, rgba(255, 255, 255, .4), rgba(38, 38, 38, 0.091) 58%);
     --shadow-ball: radial-gradient(circle, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
+
+    --distance-planet-base: 7vw;
+    --speed-planet-base: 6.5s;
+    --width-planet-base: 1vw;
+    --height-planet-base: 1vw;
+
+    --merqury-speed-sum: calc(var(--speed-planet-base) * 1.1);
+    --venus-speed-sum: calc(var(--speed-planet-base) * 1.25);
+    --earth-speed-sum: calc(var(--speed-planet-base) * 1.3);
+    --mars-speed-sum: calc(var(--speed-planet-base) * 1.15);
+    --jupiter-speed-sum: calc(var(--speed-planet-base) * 1.2);
+    --saturn-speed-sum: calc(var(--speed-planet-base) * 1.4);
+    --uranus-speed-sum: calc(var(--speed-planet-base) * 1.35);
+    --neptune-speed-sum: calc(var(--speed-planet-base) * 1.15);
+    --solarmil-speed-sum: calc(var(--speed-planet-base) * 1.3);
+    --solarman-speed-sum: calc(var(--speed-planet-base) * 1.5);
+    --mil-speed-sum: calc(var(--speed-planet-base) * 1.8);
+    --man-speed-sum: calc(var(--speed-planet-base) * 1.5);
+
+    --merqury-height: calc(var(--height-planet-base) * .15);
+    --venus-height: calc(var(--height-planet-base) * .25);
+    --earth-height: calc(var(--height-planet-base) * .5);
+    --mars-height: calc(var(--height-planet-base) * .4);
+    --jupiter-height: calc(var(--height-planet-base) * 1);
+    --saturn-height: calc(var(--height-planet-base) * .8);
+    --uranus-height: calc(var(--height-planet-base) * .7);
+    --neptune-height: calc(var(--height-planet-base) * .65);
+    --solarmil-height: calc(var(--height-planet-base) * 1.3);
+    --solarman-height: calc(var(--height-planet-base) * 1.8);
+    --mil-height: calc(var(--height-planet-base) * .5);
+    --man-height: calc(var(--height-planet-base) * .4);
+
+    --merqury-translateY: calc(var(--distance-planet-base) * .35);
+    --venus-translateY: calc(var(--distance-planet-base) * .6);
+    --earth-translateY: calc(var(--distance-planet-base) * .9);
+    --mars-translateY: calc(var(--distance-planet-base) * 1.2);
+    --jupiter-translateY: calc(var(--distance-planet-base) * 2);
+    --saturn-translateY: calc(var(--distance-planet-base) * 2.5);
+    --uranus-translateY: calc(var(--distance-planet-base) * 2.8);
+    --neptune-translateY: calc(var(--distance-planet-base) * 3);
+    --solarmil-translateY: calc(var(--distance-planet-base) * 1.6);
+    --solarman-translateY: calc(var(--distance-planet-base) * 2.6);
+    --mil-translateY: calc(var(--distance-planet-base) * .5);
+    --man-translateY: calc(var(--distance-planet-base) * .6);
+
+    --rotations-everything: 70deg;
+    --rotations-figures: 0deg;
 }
 
 * {
@@ -11,75 +59,141 @@
     margin: 0
 }
 
+body {
+    overflow: hidden;
+
+}
+
+main {
+    display: grid;
+
+}
+
 li {
     list-style: none;
 }
 
-section {
-    width: 100%;
+section:nth-of-type(1) {
+    width: 300vw;
     height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transform: translateX(-200vw);
+    position: relative;
+    z-index: 10;
     background-color: var(--space-color);
-    
 
-
-    figure {
-        display: inline-block;
-        width: 2vw;
-        height: 2vw;
-        margin: 0;
-        border-radius: 50%;
-        position: relative;
-        background: url(./images/earth.png) no-repeat;
-        background-size: 100%;
-    }
-
-    figure:after {
-        content: "";
+    >div:nth-of-type(1) {
+        background:url(./images/stars.png) repeat 10% 10%;
+        background-size: 10%;
         position: absolute;
-        border-radius: 100%;
-        width: 100%;
-        height: 100%;
         top: 0;
         left: 0;
-        background: var(--earth-color);
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        
+        animation-name: STAR-MOVE;
+        animation-duration: 80s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
     }
-      
-    figure:before {
-        content: "";
+    
+    >div:nth-of-type(2) {
+        background: url(./images/stars2.png) repeat 10% 10%;
+        background-size: 10%;
         position: absolute;
-        top: 1%;
-        left: 5%;
-        width: 90%;
-        height: 90%;
-        border-radius: 50%;
-        background: var(--extra-white);
-        z-index: 2;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -2;
+        
+        animation-name: STAR-MOVE3;
+        animation-duration: 100s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
     }
+    
+    >div:nth-of-type(3) {
+        background: url(./images/stars3.png) repeat 10% 10%;
+        background-size: 10%;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        z-index: -3;
+        
+        animation-name: STAR-MOVE2;
+        animation-duration: 200s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    } 
+
+
+
 
     ul {
         position: relative;
-        width: 100vw;
-        height: 100vh;
+        width: 100%;
+        height: 100%;
         margin: auto;
         overflow: hidden;
         
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        display:grid;
+        place-items:center;
     }
 
 
     li {
+        list-style: none;
         position: absolute;
+        grid-area: 1/1;
     }
 
+    figure {
+        display: inline-block;
+        margin: 0;
+        border-radius: 50%;
+        position: relative;
+        transform: rotate(0deg);
+        background-size: 100%;
+    }
+
+    ul:nth-of-type(1) {
+        grid-column: 1;
+
+
     
+        figure:after {
+            content: "";
+            position: absolute;
+            border-radius: 100%;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: var(--earth-color);
+        }
+          
+        figure:before {
+            content: "";
+            position: absolute;
+            top: 1%;
+            left: 5%;
+            width: 90%;
+            height: 90%;
+            border-radius: 50%;
+            background: var(--extra-white);
+            z-index: 2;
+        }
+
+        /* *********************************************************************** */
+    /* sunny *//* sunny *//* sunny *//* sunny *//* sunny *//* sunny *//* sunny */
+    /* *********************************************************************** */
+
     li:nth-of-type(1) {
-        height: 8vw;
-        width: 8vw;
+        height: 4vw;
+        width: 4vw;
         background-color: #fae20a;
         border-radius: 50%;
         box-shadow: 0 0 84px orange;
+
     }
 
     /* ************************************************************************************* */
@@ -87,50 +201,564 @@ section {
     /* ************************************************************************************* */
 
     li:nth-of-type(2) {
-        width: 10vw;
-        height: 10vw;
-        animation: spin-right 36.5s linear infinite;
+        animation: spin-right-mercury  linear infinite;
+        animation-duration: var(--merqury-speed-sum);
     }
 
     li:nth-of-type(2) figure {
-        margin-top: -20px;
-        margin-left: -20px;
-        height: 1vw;
-        width: 1vw;
+        height: var(--merqury-height);
+        width: var(--merqury-height);
         background-color: #3498db;
         box-shadow: 0 0 34px #3a4385;
-        animation: spin-right 36.5s linear infinite;
+        background: url(./images/mercury.png) no-repeat;
+        animation: spin 88s linear infinite;
+
+        background-size: 100%;
     }
 
-    /* ************************************************************************************* */
-    /* venus *//* mercury *//* mercury *//* mercury *//* mercury *//* mercury *//* mercury */
-    /* ************************************************************************************* */
+    /* *********************************************************************** */
+    /* venus *//* venus *//* venus *//* venus *//* venus *//* venus *//* venus */
+    /* *********************************************************************** */
 
     li:nth-of-type(3) {
-        width: 10vw;
-        height: 10vw;
-        animation: spin-right 36.5s linear infinite;
+        animation: spin-right-venus  linear infinite;
+        animation-duration: var(--venus-speed-sum);
     }
+    
 
     li:nth-of-type(3) figure {
-        margin-top: -20px;
-        margin-left: -20px;
-        height: 1vw;
-        width: 1vw;
+        height: var(--venus-height);
+        width: var(--venus-height);
         background-color: #3498db;
         box-shadow: 0 0 34px #3a4385;
-        animation: spin-right 36.5s linear infinite;
+        background: url(./images/venus.png) no-repeat;
+        animation: spin 88s linear infinite;
+
+        background-size: 100%;
     }
 
+    /* *********************************************************************** */
+    /* earth *//* earth *//* earth *//* earth *//* earth *//* earth *//* earth */
+    /* *********************************************************************** */
+
+    
+    li:nth-of-type(4) {
+        animation: spin-right-earth linear infinite;
+        animation-duration: var(--earth-speed-sum);
+    }
+
+    li:nth-of-type(4) figure {
+        height: var(--earth-height);
+        width: var(--earth-height);
+        background-color: #3498db;
+        box-shadow: 0 0 34px #3a4385;
+        background: url(./images/earth.png) no-repeat;
+        animation: spin 36.5s linear infinite;
+
+        background-size: 100%;
+    }
+
+    /* *********************************************************************** */
+    /* marss *//* marss *//* marss *//* marss *//* marss *//* marss *//* marss */
+    /* *********************************************************************** */
+
+    li:nth-of-type(5) {
+        box-shadow: 0 0 34px #3a4385;
+        animation: spin-right-mars linear infinite;
+        animation-duration: var(--mars-speed-sum);
+    }
+
+    li:nth-of-type(5) figure {
+        height: var(--mars-height);
+        width: var(--mars-height);
+        background-color: #3498db;
+        box-shadow: 0 0 34px #3a4385;
+        background: url(./images/mars.png) no-repeat;
+        animation: spin 36.5s linear infinite;
+
+        background-size: 100%;
+    }
+
+    /* ************************************************************************ */
+    /* jupiter *//* jupiter *//* jupiter *//* jupiter *//* jupiter *//* jupiter */
+    /* ************************************************************************ */
+    
+    li:nth-of-type(6) {
+        animation: spin-right-jupiter linear infinite;
+        animation-duration: var(--jupiter-speed-sum);
+    }
+
+    li:nth-of-type(6) figure {
+        height: var(--jupiter-height);
+        width: var(--jupiter-height);
+        background-color: #3498db;
+        box-shadow: 0 0 34px #3a4385;
+        background: url(./images/jupiter.png) no-repeat;
+        animation: spin 36.5s linear infinite;
+
+        background-size: 100%;
+    }
+
+    /* ****************************************************************************** */
+    /* saturn *//* saturn *//* saturn *//* saturn *//* saturn *//* saturn *//* saturn */
+    /* ****************************************************************************** */
+
+    li:nth-of-type(7) {
+        animation: spin-right-saturn linear infinite;
+        animation-duration: var(--saturn-speed-sum);
+    }
+
+    li:nth-of-type(7) figure {
+        height: var(--saturn-height);
+        width: var(--saturn-height);
+        background-color: #3498db;
+        box-shadow: 0 0 34px #3a4385;
+        background: url(./images/Saturnx.png) no-repeat;
+        animation: spin 36.5s linear infinite;
+
+        background-size: 100%;
+    }
+
+    /* ****************************************************************************** */
+    /* uranus *//* uranus *//* uranus *//* uranus *//* uranus *//* uranus *//* uranus */
+    /* ****************************************************************************** */
+
+    li:nth-of-type(8) {
+        animation: spin-right-uranus linear infinite;
+        animation-duration: var(--uranus-speed-sum);
+    }
+
+    li:nth-of-type(8) figure {
+        height: var(--neptune-height);
+        width: var(--uranus-height);
+        background-color: #3498db;
+        box-shadow: 0 0 34px #3a4385;
+        background: url(./images/uranus.png) no-repeat;
+        animation: spin 36.5s linear infinite;
+
+        background-size: 100%;
+    }
+
+    /* ************************************************************************************* */
+    /* neptune *//* neptune *//* neptune *//* neptune *//* neptune *//* neptune *//* neptune */
+    /* ************************************************************************************* */
+
+    li:nth-of-type(9) {
+        animation: spin-right-neptune linear infinite;
+        animation-duration: var(--neptune-speed-sum);
+    }
+
+    li:nth-of-type(9) figure {
+        height: var(--neptune-height);
+        width: var(--neptune-height);
+        background-color: #3498db;
+        box-shadow: 0 0 34px #3a4385;
+        background: url(./images/Neptune.png) no-repeat;
+        animation: spin 36.5s linear infinite;
+
+        background-size: 100%;
+    }
+    }
+
+    
+    ul:nth-of-type(2) {
+        grid-column: 2;
+
+        li {
+            height: 6vw;
+            width: 6vw;
+
+            figure {
+                background: url(./images/wormhole.png);
+                width: 100%;
+                height: 100%;
+                background-size: 100%;
+            }
+        }
+    }
+
+    ul:nth-of-type(3) {
+        grid-column: 3;
+
+
+        li:nth-of-type(1) {
+            height: 6vw;
+            width: 13vw;
+
+
+            figure {
+                background: url(./images/gargantua.png);
+                height: 100%;
+                width: 100%;
+                background-size: 100%;
+            }
+        }
+    
+        /* ******************************************************************************************** */
+        /* solarmil *//* solarmil *//* solarmil *//* solarmil *//* solarmil *//* solarmil *//* solarmil */
+        /* ******************************************************************************************** */
+    
+        li:nth-of-type(2) {
+            animation: spin-right-solarmil linear infinite;
+            animation-duration: var(--solarmil-speed-sum);
+        }
+    
+        li:nth-of-type(2) > figure {
+            height: var(--solarmil-height);
+            width: var(--solarmil-height);
+            background-color: #db3434;
+            box-shadow: 0 0 34px #853a3a;
+            background: url(./images/sun.png) no-repeat;
+            animation: spin 88s linear infinite;
+    
+            background-size: 100%;
+        }
+    
+        /* ******************************************************************************************** */
+        /* solarman *//* solarman *//* solarman *//* solarman *//* solarman *//* solarman *//* solarman */
+        /* ******************************************************************************************** */
+    
+        li:nth-of-type(3) {
+            animation: spin-right-solarman linear infinite;
+            animation-duration: var(--solarman-speed-sum);
+        }
+    
+        li:nth-of-type(3) > figure {
+            height: var(--solarman-height);
+            width: var(--solarman-height);
+            background-color: #db3434;
+            box-shadow: 0 0 34px #853a3a;
+            background-color: #fae20a;
+            background: url(./images/sun.png) no-repeat;
+            mix-blend-mode: hue;
+            animation: spin 88s linear infinite;
+    
+            background-size: 100%;
+        }
+
+        /* ****************************************************************************************** */
+        /* miller *//* miller *//* miller *//* miller *//* miller *//* miller *//* miller *//* miller */
+        /* ****************************************************************************************** */
+
+        li:nth-of-type(2) div {
+            animation: spin-right-mil linear infinite;
+            animation-duration: var(--mil-speed-sum);
+            height: var(--mil-height);
+            width: var(--mil-height);
+            background: url(./images/sun.png) no-repeat;
+
+            background-size: 100%;
+        }
+
+
+        /* ****************************************************************************************** */
+        /* mannen *//* mannen *//* mannen *//* mannen *//* mannen *//* mannen *//* mannen *//* mannen */
+        /* ****************************************************************************************** */
+
+        li:nth-of-type(3) div {
+            animation: spin-right-man linear infinite;
+            animation-duration: var(--man-speed-sum);
+            height: var(--man-height);
+            width: var(--man-height);
+            background: url(./images/sun.png) no-repeat;
+
+            background-size: 100%;
+        }
 
 
 }
+}
 
-@keyframes spin-right {
+section:nth-of-type(2) {
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    top: 75%;
+    left: 0;
+    right: 0;
+    padding: 0.5em 3em;
+    background-color: var(--timers-color);
+    color: var(--star-color);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr;
+
+    ul {
+        width: 100%;
+        height: 3em;
+        display: flex;
+
+        gap: .5em;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+
+        h3 {
+            margin-right: .5em;
+        }
+    }
+
+    li {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 3em;
+        width: .5em;
+        height: 1em;
+        line-height: 1em;
+        animation: seconds 9s linear infinite;
+    }
+
+    ul:nth-of-type(1) {
+        grid-column: 1;
+        border: solid;
+        padding-left: 1em;
+    }
+
+    li:nth-of-type(1) {--index: 1;}
+    li:nth-of-type(2) {--index: 2;}
+    li:nth-of-type(3) {--index: 3;}
+    li:nth-of-type(4) {--index: 4;}
+    li:nth-of-type(5) {--index: 5;}
+    li:nth-of-type(6) {--index: 6;}
+    li:nth-of-type(7) {--index: 7;}
+    li:nth-of-type(8) {--index: 8;}
+    li:nth-of-type(9) {--index: 9;}
+    li:nth-of-type(10){--index: 10;}
+}
+
+@keyframes spin-right-mercury {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * .35));
+        
+	}
     100% {
-        transform: rotate(360deg);
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * .35));
     }
 }
 
+@keyframes spin-right-venus {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * .6));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * .6));
+    }
+}
+
+@keyframes spin-right-earth {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * .9));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * .9));
+    }
+}
+
+@keyframes spin-right-mars {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * 1.2));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * 1.2));
+    }
+}
+
+@keyframes spin-right-jupiter {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * 2));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * 2));
+    }
+}
+
+@keyframes spin-right-saturn {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * 2.5));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * 2.5));
+    }
+}
+
+@keyframes spin-right-uranus {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * 2.8));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * 2.8));
+    }
+}
+
+@keyframes spin-right-neptune {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * 3));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * 3));
+    }
+}
+
+@keyframes spin-right-solarmil {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * 1.6));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * 1.6));
+    }
+}
+
+@keyframes spin-right-solarman {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * 2.6));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * 2.6));
+    }
+}
+
+@keyframes spin-right-mil {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * .5));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * .5));
+    }
+}
+
+@keyframes spin-right-man {
+    0% {
+		transform:
+		rotate(0deg)
+        translateY(calc(var(--distance-planet-base) * .6));
+        
+	}
+    100% {
+        transform:
+        rotate(360deg)
+        translateY(calc(var(--distance-planet-base) * .6));
+    }
+}
+
+
+@keyframes spin {
+    0% {
+        transform: 
+        rotate(0deg);
+        
+    }
+    100% {
+        transform: 
+        rotate(360deg);
+    }
+}
+
+
+
+@keyframes seconds {
+    0%  { transform: translateY(0) }
+    10% { transform: translateY(-1em) }
+    20% { transform: translateY(-2em) }
+    30% { transform: translateY(-3em) }
+    40% { transform: translateY(-4em) }
+    50% { transform: translateY(-5em) }
+    60% { transform: translateY(-6em) }
+    70% { transform: translateY(-7em) }
+    80% { transform: translateY(-8em) }
+    90% { transform: translateY(-10em);}
+    100% { transform: translateY(-10em);}
+  }
+  /* inspired by: https://chenhuijing.com/blog/can-you-make-a-countdown-timer-in-pure-css/ */
+
+
+
+
+
+
+
+/* credit to  https://css-tricks.com/examples/StarryNightCSS3/*/
+
+
+  @keyframes STAR-MOVE {
+	from {
+		background-position: 5% 5%
+	}
+	to { 
+		background-position: 130% 800%
+	}
+}
+
+@keyframes STAR-MOVE2 {
+	from {
+		background-position: 5% 5%
+	}
+	to { 
+		background-position: 130% 1000%
+	}
+}
+
+@keyframes STAR-MOVE3 {
+	from {
+		background-position: 5% 5%
+	}
+	to { 
+		background-position: 130% 900%
+	}
+}
 
 
