@@ -16,3 +16,10 @@ Dit is een schets van hoe ik denk dat het er uit gaat zien:
 
 In week 2 heb ik voornamelijk veel testjes gedaan die op een aantal plekken zijn gevaald. Ik heb wat probeersels gedaan met 3D, animaties van planeten en nog een aantal dingen. Uiteindelijk kwam ik er achter dat ik even terug moest stappen en mischien even opnieuw beginnen. Ik was namelijk begonnen met coderen zonder een echt plan. Hierom heb ik een tweede html pagina gemaakt waar ik even alleen de belangrijkste onderdelen ben gaan maken om een beter geheel te krijgen. Dit heeft denk ik gehopen aangezien ik nu een stuk beter weet wat ik ga doen.
 
+## week 3
+
+This week I finished up the code for the scrolling section. This was done by adding animation timeline: scrol() on the objects I wanted to move. using translateY to move everything in keyframes. 
+
+<img src='./images/Screenshot 2025-03-14 101953.png'>
+<img src='./images/Screenshot 2025-03-14 102006.png'>
+<img src='./images/Screenshot 2025-03-14 102039.png'>
