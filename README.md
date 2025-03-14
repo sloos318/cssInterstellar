@@ -23,3 +23,5 @@ This week I finished up the code for the scrolling section. This was done by add
 <img src='./images/Screenshot 2025-03-14 101953.png'>
 <img src='./images/Screenshot 2025-03-14 102006.png'>
 <img src='./images/Screenshot 2025-03-14 102039.png'>
+
+after being done with the scrolling animations I started working on a small 3D section. I have just started with this and don't have much yet but it is starting to get somewhere. 
