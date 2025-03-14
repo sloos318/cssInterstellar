@@ -94,12 +94,20 @@ section:nth-of-type(1) {
     scroll-timeline-name: --imageTimeline;
     scroll-timeline-axis: x;
 
-    img {
+    img:nth-of-time(1) {
         animation: move linear forwards;
         animation-timeline: --imageTimeline;
         position: absolute;
         width: var(--merqury-height);
         height: var(--merqury-height);
+    }
+
+    img:nth-of-time(2) {
+        animation: move linear forwards;
+        animation-timeline: --imageTimeline;
+        position: absolute;
+        width: calc(var(--merqury-height)*.6);
+        height: calc(var(--merqury-height)*.6);
     }
 
   
@@ -389,7 +397,7 @@ section:nth-of-type(1) {
         grid-column: 4;
 
 /* inspired by https://codepen.io/cas-van-den-elzen/pen/MWLNEoz */
-        li:nth-of-type(1) {
+        li:nth-of-type(3) {
             height: 100vh;
             width: 120vw;
             transform: translateY(50%);
@@ -581,13 +589,13 @@ section:nth-of-type(1) {
         /* solarmil *//* solarmil *//* solarmil *//* solarmil *//* solarmil *//* solarmil *//* solarmil */
         /* ******************************************************************************************** */
     
-        li:nth-of-type(2) {
+        li:nth-of-type(1) {
             animation: spin-right-solarmil linear infinite;
             animation-duration: var(--solarmil-speed-sum);
             transform: translateY(-14vw);
         }
     
-        li:nth-of-type(2) > figure {
+        li:nth-of-type(1) > figure {
             height: var(--solarmil-height);
             width: var(--solarmil-height);
 
@@ -603,12 +611,12 @@ section:nth-of-type(1) {
         /* solarman *//* solarman *//* solarman *//* solarman *//* solarman *//* solarman *//* solarman */
         /* ******************************************************************************************** */
     
-        li:nth-of-type(3) {
+        li:nth-of-type(2) {
             animation: spin-right-solarman linear infinite;
             animation-duration: var(--solarman-speed-sum);
         }
     
-        li:nth-of-type(3) > figure {
+        li:nth-of-type(2) > figure {
             height: var(--solarman-height);
             width: var(--solarman-height);
             background-color: #db3434;
@@ -625,7 +633,7 @@ section:nth-of-type(1) {
         /* miller *//* miller *//* miller *//* miller *//* miller *//* miller *//* miller *//* miller */
         /* ****************************************************************************************** */
 
-        li:nth-of-type(2) div {
+        li:nth-of-type(1) div {
             animation: spin-right-mil linear infinite;
             animation-duration: var(--mil-speed-sum);
             height: var(--mil-height);
@@ -640,7 +648,7 @@ section:nth-of-type(1) {
         /* mannen *//* mannen *//* mannen *//* mannen *//* mannen *//* mannen *//* mannen *//* mannen */
         /* ****************************************************************************************** */
 
-        li:nth-of-type(3) div {
+        li:nth-of-type(2) div {
             animation: spin-right-man linear infinite;
             animation-duration: var(--man-speed-sum);
             height: var(--man-height);
