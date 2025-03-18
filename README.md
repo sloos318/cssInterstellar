@@ -1,15 +1,13 @@
 # cssInterstellar
+In dit project gaan we volledig met html en css een opdracht uitvoeren. Ik heb ervoor gekozen om een tijdlijn te gaan maken van interstellar. Hierbij is het plan om de endurance door de ruimte in de reis op zoek naar een bewoonbare planneet. We gaan de 2 verschillende perspectieven volgen, die van cooper en die van haar dochter merv. We gaan laten zien hoe de tijd relatief is en hoe de tijd die de twee characters hebben ervaren anders zijn van elkaar. 
+
+Ik wil graag om deze reis zo goed mogelijk te visualiseren 3D, custom propperties, scroll-driven animations en gradients gaan gebruiken. 
+
 
 ## week 1
-In dit project gaan we volledig met html en css een opdracht uitvoeren. Ik heb ervoor gekozen om een tijdlijn te gaan maken van interstellar. Hierbij is het plan om de endurance door de ruimte in de reis op zoek naar een bewoonbare planneet. We gaan de tijd laten zien waar de astronauten en de cooper familie thuis op aarde door heen gaan. Dit zal character specifiek zijn door de time-space distortion die het zwarte gat gargantua veroorzaakt. Dit zal door worden getrokken tot Cooper het zwarte gat in gaat, hierbij word namelijk het moeilijke om relativiteit te visualiseren waar cooper energie is en een outside observer word van tijd en ruimte zelf. 
+In de eerste week wil ik graag een aantal schetsen maken van hoe ik wil dat het er uit gaat zien en wat ik wil berijken binnen mijn minor.
 
-De stijl die ik wil gaan implementeren is een 3D stijl. Ik wil dat het werkelijk voelt alsof je de endurance door de ruimte heen kan zien bewegen.
-
-Waar ik graag beter in wil worden en dus ga gebruiken binnen dit project zijn: 3D, custom propperties en scrolling animations.
-
-Dit is een schets van hoe ik denk dat het er uit gaat zien:
-
-<img src='./images/relativity.jpg'>
+###
 
 
 ## week 2
@@ -25,3 +23,5 @@ This week I finished up the code for the scrolling section. This was done by add
 <img src='./images/Screenshot 2025-03-14 102039.png'>
 
 after being done with the scrolling animations I started working on a small 3D section. I have just started with this and don't have much yet but it is starting to get somewhere. 
+
+
