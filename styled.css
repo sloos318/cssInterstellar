@@ -849,7 +849,7 @@ section:nth-of-type(4) {
     >div {
         display: block;
         animation: clock linear both;
-        animation-timeline: scroll(); /* Alternative: Use 'scroll()' only if supported */
+        animation-timeline: scroll(); 
         width: 30vw;
         height: 30vw;
         background:

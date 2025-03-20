@@ -142,4 +142,13 @@ Hier zien we twee onderdelen die de basis van de klok op maakte. Laten we even e
 Dit was een leuk voorbeeld van hoe ik gradients heb gebruikt in dit project.
 
 ## scroll() en view() animaties
+Natuurlijk heb ik ook gebruik gemaakt van scroll() en view() animties. Dit kun je terug zien bij de animaties van het zwarte gat, de relativiteits sectie en het bewegende ruimte station. 
+
+Dit was gelukkig niet nieuw en ging vrij snel goed. Dit is de code die ik er voor heb gebruikt:
+<code>
+    animation-timeline: scroll(); 
+</code>
+
+## wat had ik nog meer gedaan als ik meer tijd had
+Ik denk dat ik alles relatief goed af heb gekregen maar ik had graag meer tijd willen besteden aan de relativiteits sectie. Daar had ik het verhaal van cooper nog wat beter kunnen visualiseren. Maar voor de rest ben ik behoorlijk tevvreden met hoe alles er uit ziet. Ik heb veel geleerd over verschillende onderdelen van css en ben denk ik een stuk beter geworden in coderen.
 
