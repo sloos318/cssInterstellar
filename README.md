@@ -152,3 +152,15 @@ Dit was gelukkig niet nieuw en ging vrij snel goed. Dit is de code die ik er voo
 ## wat had ik nog meer gedaan als ik meer tijd had
 Ik denk dat ik alles relatief goed af heb gekregen maar ik had graag meer tijd willen besteden aan de relativiteits sectie. Daar had ik het verhaal van cooper nog wat beter kunnen visualiseren. Maar voor de rest ben ik behoorlijk tevvreden met hoe alles er uit ziet. Ik heb veel geleerd over verschillende onderdelen van css en ben denk ik een stuk beter geworden in coderen.
 
+## bronnen
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_images/Using_CSS_gradients
+https://codepen.io/JeffreyTaylor/pen/zZgKvw
+gebruikt om meer te leren over gradients
+
+https://3dtransforms.desandro.com/box
+https://css-tricks.com/css-in-3d-learning-to-think-in-cubes-instead-of-boxes/ 
+leren over 3D
+
+https://css-tricks.com/books/greatest-css-tricks/scroll-animation/ 
+scroll animation

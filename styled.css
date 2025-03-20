@@ -499,7 +499,7 @@ section:nth-of-type(2) {
         z-index: 1;
     }
 
-/* inspired by https://codepen.io/cas-van-den-elzen/pen/MWLNEoz */
+
         >li:nth-of-type(3) {
             height: 100vh;
             width: 120vw;
@@ -2039,6 +2039,3 @@ section:nth-of-type(5) {
         transform: scale(1);
     }
 }
-
-
-/* credit to  https://css-tricks.com/examples/StarryNightCSS3/*/
